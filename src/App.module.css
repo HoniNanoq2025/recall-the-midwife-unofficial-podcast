@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --red: #961f3b;
+  --lightblue: #a3bfd9;
+  --darkblue: #034c8c;
+  --light: white;
+  --dark: #2b292d;
+  --iframe: #1f2e44;
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--darkblue);
+  margin: 0 auto;
+  cursor: default;
+}
+
+.app {
+  min-height: 100vh; /* Container is at least full screen height */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+}
+
+.main {
+  flex-grow: 1;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
