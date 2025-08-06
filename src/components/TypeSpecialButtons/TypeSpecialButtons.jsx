@@ -40,7 +40,7 @@ export default function TypeSpecialButtons() {
         }, {});
 
         // Convert to array and sort by name
-        const categoriesArray = Object.values(categoryMap).sort((a, b) =>
+        const categoriesArray = Object.values(categoryMap).sort((b, a) =>
           a.name.localeCompare(b.name)
         );
 
