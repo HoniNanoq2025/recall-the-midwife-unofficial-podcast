@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import LikeCounter from "../../components/LikeCounter/LikeCounter";
 import podcastLogo from "/images/recall-the-midwife-2-banner.png";
 import seriesOneImage from "/images/series/01-series-one-neal-street.png";
+import TypeSpecialButtons from "../../components/TypeSpecialButtons/TypeSpecialButtons";
 import styles from "./Home.module.css";
 
 export default function Home({ favorites, toggleFavorites, starColor }) {
@@ -313,6 +314,7 @@ export default function Home({ favorites, toggleFavorites, starColor }) {
           View all episodes
         </button>
       </div>
+      <TypeSpecialButtons />
     </main>
   );
 }

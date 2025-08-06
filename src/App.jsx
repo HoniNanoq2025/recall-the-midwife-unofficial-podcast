@@ -4,6 +4,7 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Episodes from "./pages/Episodes/Episodes";
 import EpisodeDetail from "./components/EpisodeDetail/EpisodeDetail";
+import SpecialEpisodesList from "./pages/SpecialEpisodesList/SpecialEpisodesList";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import CookieBanner from "./components/CookieBanner/CookieBanner";
@@ -59,6 +60,15 @@ export default function App() {
             path="/episodes/:Id"
             element={
               <EpisodeDetail
+                favorites={favorites}
+                toggleFavorites={toggleFavorites}
+              />
+            }
+          />
+          <Route
+            path="/specials/:categoryName"
+            element={
+              <SpecialEpisodesList
                 favorites={favorites}
                 toggleFavorites={toggleFavorites}
               />

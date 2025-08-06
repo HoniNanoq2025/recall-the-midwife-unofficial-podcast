@@ -1,0 +1,135 @@
+/* Main Container */
+.specialEpisodesMain {
+  min-height: 100vh;
+  background-color: var(--darkblue);
+  padding: 2rem 1rem;
+}
+
+/* Header Section */
+.headerSection {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--red);
+  color: var(--light);
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-family: "Jost", sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.backButton:hover {
+  background-color: var(--lightblue);
+  color: var(--dark);
+  transform: translateX(-5px);
+}
+
+.backButton:focus {
+  outline: 3px solid var(--light);
+  outline-offset: 2px;
+}
+
+/* Category Header */
+.categoryHeader {
+  text-align: center;
+  color: var(--light);
+}
+
+.categoryTitle {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  color: var(--red);
+}
+
+.episodeCount {
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  color: var(--lightblue);
+  margin: 0;
+}
+
+/* Episodes Container */
+.episodesContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.episodesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* Loading and Error States */
+.loadingContainer,
+.errorContainer,
+.noEpisodesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 400px;
+  color: var(--light);
+  gap: 1rem;
+}
+
+.errorContainer h1,
+.noEpisodesContainer h2 {
+  color: var(--red);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+
+.errorContainer p,
+.noEpisodesContainer p {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--lightblue);
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .specialEpisodesMain {
+    padding: 1rem 0.5rem;
+  }
+  
+  .headerSection {
+    margin-bottom: 2rem;
+    gap: 1rem;
+  }
+  
+  .episodesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .backButton {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .episodesGrid {
+    gap: 1rem;
+  }
+  
+  .headerSection {
+    gap: 0.8rem;
+  }
+}
