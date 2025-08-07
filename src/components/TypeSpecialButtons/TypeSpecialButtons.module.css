@@ -1,9 +1,9 @@
 /* Special Categories Section */
 .specialCategoriesSection {
   width: 100%;
-  padding: 3rem 1rem;
-  background-color: var(--light);
+  padding: 1rem 1rem 6rem;
   margin: 2rem 0;
+  font-family: "Jost", sans-serif;
 }
 
 /* Section Header */
@@ -16,14 +16,14 @@
 }
 
 .sectionTitle {
-  color: var(--red);
+  color: var(--light);
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 300;
   margin-bottom: 0.5rem;
 }
 
 .sectionSubtitle {
-  color: var(--darkblue);
+  color: var(--lightblue);
   font-size: clamp(1rem, 2.5vw, 1.2rem);
   margin: 0;
 }
@@ -47,18 +47,8 @@
   overflow: hidden;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  height: 200px;
+  height: 150px;
   position: relative;
-}
-
-.categoryButton:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
-
-.categoryButton:focus {
-  outline: 3px solid var(--red);
-  outline-offset: 3px;
 }
 
 /* Category Background */
@@ -66,7 +56,7 @@
   width: 100%;
   height: 100%;
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   position: relative;
   transition: transform 0.3s ease;
@@ -80,11 +70,7 @@
 .categoryOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(200, 16, 46, 0.85) 0%,
-    rgba(3, 76, 140, 0.85) 100%
-  );
+  background: rgba(150, 31, 59, 0.9);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -96,27 +82,26 @@
 }
 
 .categoryButton:hover .categoryOverlay {
-  background: linear-gradient(
-    135deg,
-    rgba(200, 16, 46, 0.95) 0%,
-    rgba(3, 76, 140, 0.95) 100%
-  );
+  background: var(--lightblue);
+  color: var(--dark);
 }
 
 /* Category Text */
 .categoryName {
+  font-family: "Jost", sans-serif;
   font-size: clamp(1.2rem, 3vw, 1.5rem);
   font-weight: 600;
   margin-bottom: 0.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); */
   line-height: 1.2;
 }
 
 .episodeCount {
+  font-family: "Jost", sans-serif;
   font-size: clamp(0.9rem, 2vw, 1rem);
   font-weight: 400;
   opacity: 0.9;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); */
 }
 
 /* Loading and Error States */
@@ -124,12 +109,12 @@
 .errorContainer {
   text-align: center;
   padding: 2rem;
-  color: var(--darkblue);
+  color: var(--lightblue);
   font-size: 1.1rem;
 }
 
 .errorContainer {
-  color: var(--red);
+  color: var(--lightblue);
 }
 
 /* Responsive Design */
@@ -138,20 +123,20 @@
     padding: 2rem 0.5rem;
     margin: 1rem 0;
   }
-  
+
   .sectionHeader {
     margin-bottom: 2rem;
   }
-  
+
   .categoriesGrid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
   }
-  
+
   .categoryButton {
     height: 180px;
   }
-  
+
   .categoryOverlay {
     padding: 1rem;
   }
@@ -162,7 +147,7 @@
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  
+
   .categoryButton {
     height: 160px;
   }

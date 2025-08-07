@@ -96,9 +96,9 @@ export default function TypeSpecialButtons() {
   return (
     <section className={styles.specialCategoriesSection}>
       <div className={styles.sectionHeader}>
-        <h2 className={styles.sectionTitle}>Special Episode Categories</h2>
+        <h2 className={styles.sectionTitle}>Specials Categories</h2>
         <p className={styles.sectionSubtitle}>
-          Explore our collection of special episodes
+          Explore our collection of specials
         </p>
       </div>
 
