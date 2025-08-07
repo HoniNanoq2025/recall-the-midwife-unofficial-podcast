@@ -57,6 +57,7 @@
   color: var(--red);
   font-size: clamp(40px, 6vw, 100px);
   font-weight: 300;
+  text-transform: uppercase;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-bottom: 0.5rem;
 }
