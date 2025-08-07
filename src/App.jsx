@@ -5,6 +5,7 @@ import About from "./pages/About/About";
 import Episodes from "./pages/Episodes/Episodes";
 import EpisodeDetail from "./components/EpisodeDetail/EpisodeDetail";
 import SpecialEpisodesList from "./pages/SpecialEpisodesList/SpecialEpisodesList";
+import CookiePolicy from "./pages/CookiePolicy/CookiePolicy";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import CookieBanner from "./components/CookieBanner/CookieBanner";
@@ -73,6 +74,10 @@ export default function App() {
                 toggleFavorites={toggleFavorites}
               />
             }
+          />
+          <Route
+            path="/cookie-policy"
+            element={<CookiePolicy />}
           />
         </Routes>
       </main>
