@@ -37,7 +37,7 @@ const CookieBanner = () => {
         <p className={styles.message}>
           You can read more about the purposes for which we and our partners use
           cookies and manage your cookie settings by clicking on 'Cookie
-          Settings' or visiting our <Link to="/cookie-policy" className={styles.link}>Cookie Policy</Link>.
+          Settings' or visiting our <Link to="/cookie-policy" className={styles.link} aria-label="Link to Cookie Policy page">Cookie Policy</Link>.
         </p>
       </div>
       <div className={styles.buttons}>

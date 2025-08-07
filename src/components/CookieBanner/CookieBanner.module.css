@@ -27,6 +27,10 @@
   font-size: 16px;
 }
 
+.message > a{
+  margin: 0;
+}
+
 .accept {
   background-color: #4caf50;
   border: none;
