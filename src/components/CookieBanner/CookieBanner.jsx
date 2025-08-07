@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Cookies from "js-cookie";
+import { Link } from "react-router-dom";
 import styles from "./CookieBanner.module.css";
 
 const CookieBanner = () => {
@@ -32,10 +33,11 @@ const CookieBanner = () => {
           to improve our website performance, provide you with a customized user
           experience and analyze website traffic.
         </p>
+        {/* prettier-ignore */}
         <p className={styles.message}>
           You can read more about the purposes for which we and our partners use
           cookies and manage your cookie settings by clicking on 'Cookie
-          Settings' or visiting our Cookie Policy.
+          Settings' or visiting our <Link to="/cookie-policy" className={styles.link}>Cookie Policy</Link>.
         </p>
       </div>
       <div className={styles.buttons}>
