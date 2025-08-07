@@ -1,17 +1,22 @@
-/* Main Container */
-.specialEpisodesMain {
-  min-height: 100vh;
-  background-color: var(--darkblue);
-  padding: 2rem 1rem;
-}
-
 /* Header Section */
 .headerSection {
-  max-width: 1200px;
-  margin: 0 auto 3rem;
-  display: flex;
-  flex-direction: column;
+  background-image: url(/images/wonjong-ha-vaHSY41OmjA-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-attachment: fixed;
+  height: 350px;
+  width: 100vw;
+  display: grid;
+  place-content: center;
   gap: 1.5rem;
+}
+
+.backBtnContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 50%;
 }
 
 .backButton {
@@ -45,13 +50,15 @@
 .categoryHeader {
   text-align: center;
   color: var(--light);
+  padding-bottom: 100px;
 }
 
 .categoryTitle {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 300;
-  margin-bottom: 0.5rem;
   color: var(--red);
+  font-size: clamp(40px, 6vw, 100px);
+  font-weight: 300;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 0.5rem;
 }
 
 .episodeCount {
@@ -60,17 +67,43 @@
   margin: 0;
 }
 
+.customShapeDividerBottom {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  margin-top: -120px;
+  margin-bottom: -1px;
+  z-index: 800;
+}
+
+.customShapeDividerBottom svg {
+  position: relative;
+  display: block;
+  width: calc(123% + 1.3px);
+  height: 122px;
+}
+
+.shapeFill {
+  fill: var(--darkblue);
+}
+
 /* Episodes Container */
 .episodesContainer {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 60px;
 }
 
 .episodesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(minmax(300px, 1fr));
   gap: 2rem;
-  justify-items: center;
 }
 
 /* Loading and Error States */
@@ -103,33 +136,25 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  .specialEpisodesMain {
-    padding: 1rem 0.5rem;
-  }
-  
-  .headerSection {
-    margin-bottom: 2rem;
-    gap: 1rem;
-  }
-  
+
+@media (min-width: 1000px) {
   .episodesGrid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .backButton {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
+    grid-template-columns: repeat(3, 300px); /* Desktop: 3 columns */
   }
 }
 
-@media (max-width: 480px) {
-  .episodesGrid {
-    gap: 1rem;
+@media (min-width: 1200px) {
+  .backBtnContainer {
+    width: 1100px;
   }
-  
-  .headerSection {
-    gap: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-weight: 700;
+  }
+
+  .categoryHeader {
+    padding-bottom: 50px;
   }
 }
