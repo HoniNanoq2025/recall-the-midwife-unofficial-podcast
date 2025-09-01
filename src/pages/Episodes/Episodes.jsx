@@ -56,6 +56,7 @@ export default function Episodes({ favorites, toggleFavorites }) {
   function resetFilters() {
     setSearchTerm("");
     setSelectedSeason("");
+    setSelectedTypeSpecial("");
     setSortOption("");
     setShowOnlyFavorites(false);
     setCurrentPage(1);
