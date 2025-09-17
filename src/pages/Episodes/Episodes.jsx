@@ -1,6 +1,5 @@
 import { useState, useEffect, use } from "react";
 import FilterPanel from "../../components/FilterPanel/FilterPanel";
-import { useNavigate } from "react-router-dom";
 import EpisodeListView from "../../components/EpisodeListView/EpisodeListView";
 import Pagination from "../../components/Pagination/Pagination";
 import styles from "./Episodes.module.css";
